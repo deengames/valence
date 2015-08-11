@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SpriteEditorSceneProperties xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BoundsCamera>
+    <X>0</X>
+    <Y>0</Y>
+    <Z>-40</Z>
+    <Orthogonal>false</Orthogonal>
+    <OrthogonalHeight>600</OrthogonalHeight>
+    <NearClipPlane>1</NearClipPlane>
+    <FarClipPlane>1000</FarClipPlane>
+  </BoundsCamera>
+  <Camera>
+    <X>-645.38916</X>
+    <Y>-208.069</Y>
+    <Z>-350.77243</Z>
+    <Orthogonal>true</Orthogonal>
+    <OrthogonalHeight>1297.725</OrthogonalHeight>
+    <NearClipPlane>1</NearClipPlane>
+    <FarClipPlane>3900</FarClipPlane>
+  </Camera>
+  <WorldAxesVisible>true</WorldAxesVisible>
+  <PixelSize>0</PixelSize>
+</SpriteEditorSceneProperties>

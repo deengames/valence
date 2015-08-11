@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26341FE4-3A4B-4C3B-AB33-2FA7121D8C33}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DeenGames.Valence</RootNamespace>
+    <AssemblyName>Valence</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Valence.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>FlatSilverBallTemplate.App</SilverlightAppEntry>
+    <TestPageFileName>TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>false</ThrowErrorsInValidation>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AStarPathFinderSilverlight, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\AStarPathFinderSilverlight.dll</HintPath>
+    </Reference>
+    <Reference Include="BadgeManager">
+      <HintPath>Libraries\BadgeManager.dll</HintPath>
+    </Reference>
+    <Reference Include="DataPreparer">
+      <HintPath>Libraries\DataPreparer.dll</HintPath>
+    </Reference>
+    <Reference Include="FlatRedBall, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="PersistentStorage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\PersistentStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="SilverArcade.SilverSprite, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System.Numerics, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows" />
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="ToolsSilverlight">
+      <HintPath>Libraries\ToolsSilverlight.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Toolbox.cs" />
+    <Compile Include="Screens\CreditsScreen.cs" />
+    <Compile Include="Screens\SplashScreen.cs" />
+    <Compile Include="Screens\StoryScreen.cs" />
+    <Compile Include="Tower\Controls\Tower3SliceButton.cs" />
+    <Compile Include="Tower\Controls\TowerBaseButton.cs" />
+    <Compile Include="Tower\Controls\TowerMessagePanel.cs" />
+    <Compile Include="Controls\InfoPanel.cs" />
+    <Compile Include="Tower\Controls\Tower9SliceButton.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="Model\Atom.cs" />
+    <Compile Include="Model\CoreModel.cs" />
+    <Compile Include="Model\Molecule.cs" />
+    <Compile Include="Controls\Tile.cs" />
+    <Compile Include="Page.xaml.cs">
+      <DependentUpon>Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\CoreGameScreen.cs" />
+    <Compile Include="Screens\LevelSelectScreen.cs" />
+    <Compile Include="Screens\MainMenuScreen.cs" />
+    <Compile Include="Screens\FRB\Screen.cs" />
+    <Compile Include="Screens\FRB\ScreenManager.cs" />
+    <Compile Include="Tower\Core\TowerScreen.cs" />
+    <Compile Include="Tower\Controls\TowerText.cs" />
+    <Compile Include="Tower\Controls\TowerSprite.cs" />
+    <Compile Include="Tower\Core\TowerUtils.cs" />
+    <Compile Include="Utils\OrderTilesByElectronegativityWithAtomComparer.cs" />
+    <Compile Include="Utils\OrderTilesByAtomNameComparer.cs" />
+    <Compile Include="Utils\Pair.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Page.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\1x1.png" />
+    <Content Include="Content\Atoms\Al.png" />
+    <Content Include="Content\Atoms\B.png" />
+    <Content Include="Content\Atoms\Be.png" />
+    <Content Include="Content\Atoms\C.png" />
+    <Content Include="Content\Atoms\Ca.png" />
+    <Content Include="Content\Atoms\Cl.png" />
+    <Content Include="Content\Atoms\Cu%28I%29.png" />
+    <Content Include="Content\Atoms\Cu%28II%29.png" />
+    <Content Include="Content\Atoms\Fe%28II%29.png" />
+    <Content Include="Content\Atoms\Fe%28III%29.png" />
+    <Content Include="Content\Atoms\Fl.png" />
+    <Content Include="Content\Atoms\H.png" />
+    <Content Include="Content\Atoms\He.png" />
+    <Content Include="Content\Atoms\Hg%28I%29.png" />
+    <Content Include="Content\Atoms\Hg%28II%29.png" />
+    <Content Include="Content\Atoms\I.png" />
+    <Content Include="Content\Atoms\Li.png" />
+    <Content Include="Content\Atoms\N.png" />
+    <Content Include="Content\Atoms\Na.png" />
+    <Content Include="Content\Atoms\Ne.png" />
+    <Content Include="Content\Atoms\O.png" />
+    <Content Include="Content\Atoms\P.png" />
+    <Content Include="Content\Atoms\Pb%28II%29.png" />
+    <Content Include="Content\Atoms\Pb%28IV%29.png" />
+    <Content Include="Content\Atoms\S.png" />
+    <Content Include="Content\Atoms\Xe.png" />
+    <Content Include="Content\Button\bottom-center.png" />
+    <Content Include="Content\Button\bottom-left.png" />
+    <Content Include="Content\Button\bottom-right.png" />
+    <Content Include="Content\Button\bubble-center.png" />
+    <Content Include="Content\Button\bubble-left.png" />
+    <Content Include="Content\Button\bubble-right.png" />
+    <Content Include="Content\Button\middle-center.png" />
+    <Content Include="Content\Button\middle-left.png" />
+    <Content Include="Content\Button\middle-right.png" />
+    <Content Include="Content\Button\top-center.png" />
+    <Content Include="Content\Button\top-left.png" />
+    <Content Include="Content\Button\top-right.png" />
+    <Content Include="Content\Credits\eroded-metal.jpg" />
+    <Content Include="Content\Credits\extruded-metal.jpg" />
+    <Content Include="Content\Credits\metal-background.jpg" />
+    <Content Include="Content\Credits\metal-gate.jpg" />
+    <Content Include="Content\Credits\metal-under-board.jpg" />
+    <Content Include="Content\Credits\speaker-icon.png" />
+    <Content Include="Content\Credits\story-1.jpg" />
+    <Content Include="Content\Credits\story-2.jpg" />
+    <Content Include="Content\Credits\stripes.jpg" />
+    <Content Include="Content\Credits\titlescreen.jpg" />
+    <Content Include="Content\deengames-logo.jpg" />
+    <Content Include="Content\frieze.png" />
+    <Content Include="Content\Menus\avalanche-level.png" />
+    <Content Include="Content\Credits\credits-info-window.png" />
+    <Content Include="Content\Credits\credits.png" />
+    <Content Include="Content\Menus\inactive-level.png" />
+    <Content Include="Content\Menus\menu-screen.jpg" />
+    <Content Include="Content\Menus\normal-level.png" />
+    <Content Include="Content\Menus\puzzle-level.png" />
+    <Content Include="Content\Menus\select-level.png" />
+    <Content Include="Content\Menus\trickle-level.png" />
+    <Content Include="Content\message-panel.png" />
+    <Content Include="Content\metal-background.jpg" />
+    <Content Include="Content\metal-board.jpg" />
+    <EmbeddedResource Include="Content\PuzzleLevels\Puzzle1.txt" />
+    <None Include="Content\PuzzleLevels\Template.txt" />
+    <EmbeddedResource Include="Content\PuzzleLevels\Puzzle2.txt" />
+    <EmbeddedResource Include="Content\PuzzleLevels\Puzzle3.txt" />
+    <EmbeddedResource Include="Content\PuzzleLevels\Puzzle4.txt" />
+    <EmbeddedResource Include="Content\PuzzleLevels\Puzzle5.txt" />
+    <EmbeddedResource Include="Content\PuzzleLevels\Puzzle6.txt" />
+    <EmbeddedResource Include="Content\PuzzleLevels\Puzzle7.txt" />
+    <EmbeddedResource Include="Content\PuzzleLevels\Puzzle8.txt" />
+    <EmbeddedResource Include="Content\PuzzleLevels\Puzzle9.txt" />
+    <EmbeddedResource Include="Content\PuzzleLevels\Puzzle12.txt" />
+    <EmbeddedResource Include="Content\Sound\atom-placed.mp3" />
+    <EmbeddedResource Include="Content\Sound\reaction.mp3" />
+    <EmbeddedResource Include="Content\Sound\atoms-generated.mp3" />
+    <EmbeddedResource Include="Content\Sound\level-complete.mp3" />
+    <EmbeddedResource Include="Content\Sound\ulimited-mode-atoms-cleared.mp3" />
+    <EmbeddedResource Include="Content\PuzzleLevels\Puzzle10.txt" />
+    <EmbeddedResource Include="Content\PuzzleLevels\Puzzle11.txt" />
+    <EmbeddedResource Include="Content\Sound\machine-powers-down.mp3" />
+    <EmbeddedResource Include="Content\Sound\takbeer-of-athan.mp3" />
+    <Content Include="Content\status-bar.png" />
+    <Content Include="Content\Story\game-complete.jpg" />
+    <Content Include="Content\Story\intro-1.jpg" />
+    <Content Include="Content\Story\intro-2.jpg" />
+    <Content Include="Content\Story\story-mode-complete.jpg" />
+    <Content Include="Content\tile.png" />
+    <Content Include="Content\tutorial-panel.png" />
+    <Content Include="Content\titlescreen.jpg" />
+    <Content Include="Libraries\FlatRedBall.dll" />
+    <Content Include="Libraries\SilverArcade.SilverSprite.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Scenes\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
